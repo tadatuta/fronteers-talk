@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.idea
+.project
+.svn
+npm-debug.log
+
+.enb/tmp/
+*pages*/*/*
+!*pages*/*/*.src.html
