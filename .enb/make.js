@@ -19,7 +19,7 @@ module.exports = function(config) {
             // essential
             [enbBemTechs.levels, { levels: ['blocks'] }],
             [techs.fileProvider, { target: '?.src.html' }],
-            [techs.htmlToBemjson, { source: '?.src.html', target: '.tmp.bemjson.js' }],
+            [techs.htmlToBemjson, { htmlFile: '?.src.html', target: '.tmp.bemjson.js' }],
             [enbBemTechs.bemjsonToBemdecl, { source: '.tmp.bemjson.js', target: '.tmp.bemdecl.js' }],
             [enbBemTechs.deps, { bemdeclFile: '.tmp.bemdecl.js', target: '.tmp.deps.js' }],
             [enbBemTechs.files, { depsFile: '.tmp.deps.js' }],
@@ -39,7 +39,7 @@ module.exports = function(config) {
                 bemjsonFile: '.tmp.bemjson.js',
                 target: '.tmp.html'
             }],
-            [techs.htmlBeautify, { source: '.tmp.html',  target: '?.html' }],
+            [techs.htmlBeautify, { htmlFile: '.tmp.html',  target: '?.html' }],
 
             // js
             [techs.browserJs, { target: '.tmp.browser.js' }],
